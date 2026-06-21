@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b4st2hnlpidew"]
+
+[ext_resource type="PackedScene" uid="uid://cc347cfv7xxjj" path="res://actors/dog_petting_actor/dog_petting_actor.tscn" id="1_4bcbr"]
+
+[node name="DogPettingScreen" type="Node2D" unique_id=236115617]
+
+[node name="DogPettingActor" parent="." unique_id=1414874940 instance=ExtResource("1_4bcbr")]
+position = Vector2(589, 319)

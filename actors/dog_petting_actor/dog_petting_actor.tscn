@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cc347cfv7xxjj"]
+
+[ext_resource type="Texture2D" uid="uid://ib1jh8nauk8h" path="res://assets/sprites/programmer_art/dog_pet.png" id="1_6mxxx"]
+[ext_resource type="Script" uid="uid://cbmac2yobn8gj" path="res://actors/dog_petting_actor/hand.gd" id="2_8i0j2"]
+[ext_resource type="Texture2D" uid="uid://b84yef6r140yy" path="res://assets/sprites/programmer_art/hand.png" id="3_dix1m"]
+
+[node name="DogPettingActor" type="Node2D" unique_id=1414874940]
+
+[node name="DogSprite" type="Sprite2D" parent="." unique_id=709428198]
+texture = ExtResource("1_6mxxx")
+
+[node name="Hand" type="Node2D" parent="." unique_id=477618615]
+position = Vector2(-66, 69)
+script = ExtResource("2_8i0j2")
+
+[node name="HandSprite" type="Sprite2D" parent="Hand" unique_id=769497095]
+position = Vector2(80, 0)
+scale = Vector2(0.3159091, 0.31590906)
+texture = ExtResource("3_dix1m")
+region_enabled = true
+region_rect = Rect2(412.56384, 217.29733, 257.2307, 220.7897)
+
+[node name="MeasurementTimer" type="Timer" parent="Hand" unique_id=675605549]
+wait_time = 0.25
+autostart = true
+
+[node name="Control" type="Control" parent="." unique_id=2129147718]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1288123702]
+layout_mode = 0
+offset_left = -462.0
+offset_top = -250.0
+offset_right = 38.0
+offset_bottom = -150.0
+theme_override_font_sizes/normal_font_size = 60
+text = "Slower!"
+
+[node name="ProgressBar" type="ProgressBar" parent="Control" unique_id=1493021110]
+layout_mode = 0
+offset_left = -545.0
+offset_top = -200.0
+offset_right = -510.0
+offset_bottom = 200.0
+fill_mode = 3
