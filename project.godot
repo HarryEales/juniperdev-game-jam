@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="juniperdev game jam"
-run/main_scene="uid://b4st2hnlpidew"
+run/main_scene="uid://cnu8g300nhcwp"
 config/features=PackedStringArray("4.7", "Forward Plus")
 run/max_fps=165
 config/icon="res://icon.svg"
