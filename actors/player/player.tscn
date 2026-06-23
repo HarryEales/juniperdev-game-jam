@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cgv4muob5d47u" path="res://actors/player/player.gd" id="1_ilk7j"]
 [ext_resource type="Texture2D" uid="uid://ry5fv06cfb8s" path="res://icon.svg" id="1_nvxhs"]
+[ext_resource type="Script" uid="uid://w4ttais1ras4" path="res://other_classes/handlers/handler_parent/handler_parent.gd" id="3_lsqbn"]
+[ext_resource type="Script" uid="uid://citifm575k0gu" path="res://other_classes/handlers/movement_handler/movement_handler.gd" id="4_6p1w3"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1848371199]
 script = ExtResource("1_ilk7j")
@@ -9,3 +11,11 @@ script = ExtResource("1_ilk7j")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=199028382]
 scale = Vector2(4, 4)
 texture = ExtResource("1_nvxhs")
+
+[node name="HandlerParent" type="Node" parent="." unique_id=505789089]
+script = ExtResource("3_lsqbn")
+metadata/_custom_type_script = "uid://w4ttais1ras4"
+
+[node name="MovementHandler" type="Node" parent="HandlerParent" unique_id=586954366]
+script = ExtResource("4_6p1w3")
+metadata/_custom_type_script = "uid://citifm575k0gu"
