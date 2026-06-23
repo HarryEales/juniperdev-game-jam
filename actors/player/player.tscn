@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://ry5fv06cfb8s" path="res://icon.svg" id="1_nvxhs"]
 [ext_resource type="Script" uid="uid://w4ttais1ras4" path="res://other_classes/handlers/handler_parent/handler_parent.gd" id="3_lsqbn"]
 [ext_resource type="Script" uid="uid://citifm575k0gu" path="res://other_classes/handlers/movement_handler/movement_handler.gd" id="4_6p1w3"]
+[ext_resource type="Script" uid="uid://dmd8wvwfve2eu" path="res://other_classes/state/state_machine.gd" id="5_6p1w3"]
+[ext_resource type="Script" uid="uid://dtbb87kyh0pmg" path="res://actors/player/states/player_regular_state.gd" id="6_15y17"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1848371199]
 script = ExtResource("1_ilk7j")
@@ -19,3 +21,10 @@ metadata/_custom_type_script = "uid://w4ttais1ras4"
 [node name="MovementHandler" type="Node" parent="HandlerParent" unique_id=586954366]
 script = ExtResource("4_6p1w3")
 metadata/_custom_type_script = "uid://citifm575k0gu"
+
+[node name="StateMachine" type="Node" parent="." unique_id=18371402]
+script = ExtResource("5_6p1w3")
+metadata/_custom_type_script = "uid://dmd8wvwfve2eu"
+
+[node name="PlayerRegularState" type="Node" parent="StateMachine" unique_id=25799519]
+script = ExtResource("6_15y17")

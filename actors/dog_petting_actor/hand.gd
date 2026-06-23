@@ -34,7 +34,7 @@ var _distance_this_second : float = 0.0
 @onready var _measurement_timer : Timer = $MeasurementTimer
 
 
-func _ready():
+func _ready() -> void:
 	_minigame_is_going = true
 	
 	# UI
@@ -50,7 +50,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _minigame_logic() -> void:
-	if Input.is_action_pressed("Mouse_Down"):
+	if Input.is_action_pressed("mouse_down"):
 		_rotate_hand()
 
 func _rotate_hand() -> void:

@@ -2,9 +2,9 @@ extends BaseHandler
 class_name MovementHandler
 
 
-@export var max_speed : float = 150.0
-@export var accel : float = 400.0
-@export var _friction : float = 380.0
+@export var max_speed : float = 3000.0
+@export var accel : float = 7000.0
+@export var _friction : float = 3800.0
 
 @onready var _root_cb : CharacterBody2D = _root as CharacterBody2D
 

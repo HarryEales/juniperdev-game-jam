@@ -4,12 +4,11 @@ class_name StateMachine
 
 signal changed_state
 
-@export var _starting_state_name : String
-
 var _state_dict : Dictionary[String, State]
 var _current_state : State
 
 @onready var _root : Node = get_parent()
+@onready var _root_entity : Entity = _root as Entity
 
 
 func _ready() -> void:
