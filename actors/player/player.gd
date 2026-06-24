@@ -4,6 +4,8 @@ class_name Player
 static var instance : Player
 
 func _ready() -> void:
+	super._ready()
+	
 	if not instance:
 		instance = self
 	else:

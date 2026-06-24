@@ -46,11 +46,10 @@ func _ready() -> void:
 	_measurement_timer.timeout.connect(_timer_timed_out)
 
 func _process(delta: float) -> void:
-	pass
-	#if _visual_tweening_score < _current_score:
-	#	_visual_tweening_score += 0.03125
-	#	_minigame_ui_progress_bar.value = _visual_tweening_score
-	#	print("visual score: " + str(_visual_tweening_score) + ". current score: " + str(_current_score))
+	if _visual_tweening_score < _current_score:
+		_visual_tweening_score += 0.03125
+		_minigame_ui_progress_bar.value = _visual_tweening_score
+		print("visual score: " + str(_visual_tweening_score) + ". current score: " + str(_current_score))
 
 func _physics_process(delta: float) -> void:
 	if _minigame_is_going:
@@ -89,15 +88,15 @@ func _timer_timed_out() -> void:
 	if _distance_this_second >= best_min_speed and _distance_this_second <= best_max_speed:
 		_minigame_ui_text.text = "Best"
 		_current_score += 1
-		_minigame_ui_progress_bar.value = _current_score
+		#_minigame_ui_progress_bar.value = _current_score
 	elif _distance_this_second >= half_min_speed and _distance_this_second <= half_max_speed:
 		_minigame_ui_text.text = "Half"
 		_current_score += 0.5
-		_minigame_ui_progress_bar.value = _current_score
+		#_minigame_ui_progress_bar.value = _current_score
 	elif _distance_this_second >= quarter_min_speed and _distance_this_second <= quarter_max_speed:
 		_minigame_ui_text.text = "Quarter"
 		_current_score += 0.25
-		_minigame_ui_progress_bar.value = _current_score
+		#_minigame_ui_progress_bar.value = _current_score
 	else:
 		_minigame_ui_text.text = "Bad"
 	

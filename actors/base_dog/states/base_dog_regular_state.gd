@@ -49,7 +49,7 @@ func _enter() -> void:
 func _update(delta : float) -> void:
 	if _current_action == CURRENT_ACTION.WALK:
 		_movement_handler.move(delta, _random_direction_array[_current_random_direction])
-		print(_random_direction_array[_current_random_direction])
+		#print(_random_direction_array[_current_random_direction])
 	else:
 		_movement_handler.move(delta, Vector2.ZERO)
 
