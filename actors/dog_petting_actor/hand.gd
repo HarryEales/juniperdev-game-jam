@@ -14,6 +14,7 @@ class_name HandHandler
 @export var score_needed : float = 16.0
 
 var _current_score : float = 0
+var _visual_tweening_score : float = 0
 
 var _minigame_is_going : bool
 
@@ -28,7 +29,7 @@ var _distance_this_second : float = 0.0
 
 
 @onready var _minigame_ui_text : RichTextLabel = get_parent().get_node("Control").get_node("RichTextLabel")
-@onready var _minigame_ui_progress_bar : ProgressBar = get_parent().get_node("Control").get_node("ProgressBar")
+@onready var _minigame_ui_progress_bar : TextureProgressBar = get_parent().get_node("Control").get_node("ProgressBar")
 
 @onready var _hand_sprite : Sprite2D = $HandSprite
 @onready var _measurement_timer : Timer = $MeasurementTimer
@@ -43,6 +44,13 @@ func _ready() -> void:
 	_minigame_ui_text.text = ""
 	
 	_measurement_timer.timeout.connect(_timer_timed_out)
+
+func _process(delta: float) -> void:
+	pass
+	#if _visual_tweening_score < _current_score:
+	#	_visual_tweening_score += 0.03125
+	#	_minigame_ui_progress_bar.value = _visual_tweening_score
+	#	print("visual score: " + str(_visual_tweening_score) + ". current score: " + str(_current_score))
 
 func _physics_process(delta: float) -> void:
 	if _minigame_is_going:
@@ -75,7 +83,7 @@ func _timer_timed_out() -> void:
 	if ! _minigame_is_going:
 		return
 	
-	print(str(_distance_this_second))
+	#print(str(_distance_this_second))
 	
 	# Update UI Slower/Faster/Perfect text
 	if _distance_this_second >= best_min_speed and _distance_this_second <= best_max_speed:
