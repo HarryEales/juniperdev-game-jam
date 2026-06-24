@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs7r3eudsx1n3"
-path="res://.godot/imported/01.png-e0b5016b7a7cd5c87fecf9983781c4dd.ctex"
+uid="uid://cvmurxtn2t23"
+path="res://.godot/imported/001.png-58643dfe27046067c99fa7c3993ff87d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/actual_art/Dog_Assets/01.png"
-dest_files=["res://.godot/imported/01.png-e0b5016b7a7cd5c87fecf9983781c4dd.ctex"]
+source_file="res://assets/sprites/actual_art/Dog_Assets/Pug_Idle/001.png"
+dest_files=["res://.godot/imported/001.png-58643dfe27046067c99fa7c3993ff87d.ctex"]
 
 [params]
 

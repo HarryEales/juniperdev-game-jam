@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dudeab4qmrfbm"
-path="res://.godot/imported/02.png-490b65b93a26a025cfa78a1e2900c41c.ctex"
+uid="uid://d2ms80atrn67a"
+path="res://.godot/imported/001.png-ad3a3099b0878d36ea1a4bde10ead40a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/actual_art/Dog_Assets/02.png"
-dest_files=["res://.godot/imported/02.png-490b65b93a26a025cfa78a1e2900c41c.ctex"]
+source_file="res://assets/sprites/actual_art/Dog_Assets/Gold_Walk/001.png"
+dest_files=["res://.godot/imported/001.png-ad3a3099b0878d36ea1a4bde10ead40a.ctex"]
 
 [params]
 
