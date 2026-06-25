@@ -12,6 +12,7 @@ size = Vector2(515, 515)
 
 [node name="BaseDog" type="CharacterBody2D" unique_id=1995112175]
 script = ExtResource("1_scpoa")
+_entity_type = 2
 _has_character_body = true
 _does_move = true
 
@@ -37,6 +38,9 @@ metadata/_custom_type_script = "uid://dmd8wvwfve2eu"
 
 [node name="BaseDogRegularState" type="Node" parent="StateMachine" unique_id=1220384127]
 script = ExtResource("5_uph5h")
+min_max_walk_time = null
+min_max_walk_intervals = null
+min_max_idle_time = null
 metadata/_custom_type_script = "uid://hra40ug3jy77"
 
 [node name="MovementTimer" type="Timer" parent="StateMachine/BaseDogRegularState" unique_id=1882036573]

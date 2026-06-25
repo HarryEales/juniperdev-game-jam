@@ -1,10 +1,16 @@
 [gd_scene format=4 uid="uid://cnu8g300nhcwp"]
 
+[ext_resource type="Script" uid="uid://bkibw77qg0s1n" path="res://actors/world/game_manager.gd" id="1_72io5"]
 [ext_resource type="TileSet" uid="uid://bvc74l0nwgr0d" path="res://resources/tile_sets/default_park_tile_set.tres" id="2_0suvy"]
 [ext_resource type="PackedScene" uid="uid://c7kd818c6j1cn" path="res://actors/player/player.tscn" id="3_0suvy"]
 [ext_resource type="PackedScene" uid="uid://cabahyr20lysi" path="res://actors/base_dog/base_dog.tscn" id="3_72io5"]
+[ext_resource type="Script" uid="uid://bsnuyr5s6qr4h" path="res://actors/world/dog_area.gd" id="5_psfh7"]
 
-[node name="world" type="Node2D" unique_id=819079505]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bb13v"]
+size = Vector2(30000, 14000)
+
+[node name="World" type="Node2D" unique_id=819079505]
+script = ExtResource("1_72io5")
 
 [node name="TilemapParent" type="Node2D" parent="." unique_id=1511364418]
 
@@ -25,7 +31,7 @@ tile_map_data = PackedByteArray("AADg//7/CwABAAIAAAAfAP7/CwAAAAIAAAAfAB4ACwAAAAI
 tile_set = ExtResource("2_0suvy")
 
 [node name="BaseDog" parent="." unique_id=1995112175 instance=ExtResource("3_72io5")]
-position = Vector2(2937, 1612)
+position = Vector2(2838, 1363)
 
 [node name="Player" parent="." unique_id=1848371199 instance=ExtResource("3_0suvy")]
 
@@ -39,3 +45,13 @@ limit_bottom = 15500
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 7.5
+
+[node name="DogArea" type="Area2D" parent="." unique_id=1529503194]
+position = Vector2(0, 7350)
+script = ExtResource("5_psfh7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DogArea" unique_id=738217887]
+shape = SubResource("RectangleShape2D_bb13v")
+
+[connection signal="body_entered" from="DogArea" to="DogArea" method="_on_body_entered"]
+[connection signal="body_exited" from="DogArea" to="DogArea" method="_on_body_exited"]
